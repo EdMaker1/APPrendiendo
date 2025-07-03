@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apprendiendo Diamond Painting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Pantalla de Inicio -->
+  <div id="pantalla-inicio" class="pantalla">
+    <div class="marco-inicio">
+      <h1 class="titulo-bienvenida">Bienvenido a APPrendiendo!!!</h1>
+      <img src="imagenes/menu_inicio.png" alt="Menú Inicio" class="imagen-inicio">
+      <button id="btnEmpezar" class="btn-grande">Empezar a pintar</button>
+    </div>
+  </div>
+
+  <!-- Pantalla de Selección de Imagen -->
+  <div id="pantalla-seleccion" class="pantalla oculta">
+    <div class="marco-seleccion">
+      <h2>Selecciona tu imagen para pintar</h2>
+      <div class="galeria-imagenes">
+        <div class="opcion-imagen" data-imagen="1">
+          <img src="imagenes/Color1.png" alt="Pelota">
+          <p>Pelota</p>
+          <button class="btn-seleccionar">Seleccionar</button>
+        </div>
+        <div class="opcion-imagen" data-imagen="2">
+          <img src="imagenes/Color2.png" alt="Stich">
+          <p>Stich</p>
+          <button class="btn-seleccionar">Seleccionar</button>
+        </div>
+        <div class="opcion-imagen" data-imagen="3">
+          <img src="imagenes/Color3.png" alt="Osito">
+          <p>Osito</p>
+          <button class="btn-seleccionar">Seleccionar</button>
+        </div>
+      </div>
+      <button id="btnVolverInicio" class="btn-regresar">← Volver</button>
+    </div>
+  </div>
+
+  <!-- Pantalla de Juego -->
+  <div id="pantalla-juego" class="pantalla oculta">
+    <div class="marco-juego">
+      <div class="contenedor-principal">
+        <div class="panel-referencia">
+          <h3>Referencia</h3>
+          <img id="miniatura" src="" alt="Referencia" width="200">
+          <div id="paleta-colores" class="paleta-colores"></div>
+          <div class="controles-secundarios">
+            <button id="btnBorrador" class="btn-borrador">🧽 Borrador</button>
+            <button id="btnVolverSeleccion" class="btn-regresar">← Cambiar imagen</button>
+          </div>
+        </div>
+        
+        <div class="panel-juego">
+          <div class="controles">
+            <input type="color" id="colorPicker" value="#ff0000">
+            <p id="progreso">Progreso: 0 zonas pintadas</p>
+          </div>
+
+          <div class="canvas-container">
+            <img id="imagenFondo" src="" alt="Guía" class="imagen-fondo">
+            <canvas id="canvas"></canvas>
+          </div>
+
+          <p id="mensajeFinal"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
